@@ -1,0 +1,43 @@
+# Governance Alerts Service Configuration
+
+# Alert settings
+alerts:
+  # Hours before voting start to send notification
+  hours_before_start: 24
+  # Hours before voting end to send notification  
+  hours_before_end: 6
+  # Check interval in minutes (60 = every hour)
+  check_interval_minutes: 60
+  # Send notification when service starts
+  notify_on_startup: true
+
+# Networks configuration
+networks:
+  # Babylon Mainnet - PublicNode REST
+  babylon-mainnet:
+    name: "Babylon Mainnet"
+    rest_endpoint: "https://babylon-rest.publicnode.com"
+    chain_id: "bbn-1"
+    
+  # ZetaChain Mainnet - BlockPI REST
+  zetachain-mainnet:
+    name: "ZetaChain Mainnet"
+    rest_endpoint: "https://zetachain-athens.blockpi.network/lcd/v1/public"
+    chain_id: "zetachain_7000-1"
+
+# Notification settings
+notifications:
+  telegram:
+    enabled: false
+    bot_token: "TEST"
+    # Integer parameter ID of the chat
+    chat_id: 1234567890
+  
+  slack:
+    enabled: false
+    webhook_url: "YOUR_WEBHOOK_URL_HERE"
+
+# Logging
+logging:
+  level: "info"
+  format: "json" 
