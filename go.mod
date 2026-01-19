@@ -3,7 +3,7 @@ module governance-alerts-cosmos
 go 1.22
 
 require (
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.9.4
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
 	gopkg.in/telebot.v3 v3.3.8
